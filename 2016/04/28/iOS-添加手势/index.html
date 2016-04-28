@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>坏坏的私家领地</title>
+  <title>iOS 添加手势 | 坏坏的私家领地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="私家地盘，说话请注意点！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="坏坏的私家领地">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="ios目前支持6中手势识别。
+UITapGestureRecognizer  ： 点击手势
+UIPinchGestureRecognizer  ： 捏合手势
+UIPanGestureRecognizer  ：  拖动手势
+UISwipeGestureRecognizer  ： 滑动手势
+UIRotationGestureRecognizer  ： 旋转手势
+UILongPressGestureRe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 添加手势">
+<meta property="og:url" content="http://yoursite.com/2016/04/28/iOS-添加手势/index.html">
 <meta property="og:site_name" content="坏坏的私家领地">
-<meta property="og:description" content="私家地盘，说话请注意点！">
+<meta property="og:description" content="ios目前支持6中手势识别。
+UITapGestureRecognizer  ： 点击手势
+UIPinchGestureRecognizer  ： 捏合手势
+UIPanGestureRecognizer  ：  拖动手势
+UISwipeGestureRecognizer  ： 滑动手势
+UIRotationGestureRecognizer  ： 旋转手势
+UILongPressGestureRe">
+<meta property="og:updated_time" content="2016-04-28T04:22:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="坏坏的私家领地">
-<meta name="twitter:description" content="私家地盘，说话请注意点！">
+<meta name="twitter:title" content="iOS 添加手势">
+<meta name="twitter:description" content="ios目前支持6中手势识别。
+UITapGestureRecognizer  ： 点击手势
+UIPinchGestureRecognizer  ： 捏合手势
+UIPanGestureRecognizer  ：  拖动手势
+UISwipeGestureRecognizer  ： 滑动手势
+UIRotationGestureRecognizer  ： 旋转手势
+UILongPressGestureRe">
   
     <link rel="alternate" href="/atom.xml" title="坏坏的私家领地" type="application/atom+xml">
   
@@ -66,9 +85,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-iOS-添加手势" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-iOS-添加手势" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/04/28/iOS-添加手势/" class="article-date">
   <time datetime="2016-04-28T04:21:29.000Z" itemprop="datePublished">2016-04-28</time>
@@ -81,8 +98,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/28/iOS-添加手势/">iOS 添加手势</a>
+    <h1 class="article-title" itemprop="name">
+      iOS 添加手势
     </h1>
   
 
@@ -117,93 +134,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-git的使用方法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/04/18/git的使用方法/" class="article-date">
-  <time datetime="2016-04-18T02:10:45.000Z" itemprop="datePublished">2016-04-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/18/git的使用方法/">git的使用</a>
-    </h1>
+    <a href="/2016/04/18/git的使用方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">git的使用</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="git的使用"><a href="#git的使用" class="headerlink" title="git的使用"></a>git的使用</h2><h3 id="一-git的安装"><a href="#一-git的安装" class="headerlink" title="一.git的安装"></a>一.git的安装</h3><ol>
-<li><a href="http://git-scm.com/download" target="_blank" rel="external">点击此处</a>去下载git环境</li>
-<li><p>终端编译安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxf git-1.7.2.2.tar.gz</span><br><span class="line">$ cd git-1.7.2.2</span><br><span class="line">$ make prefix=/usr/local all</span><br><span class="line">$ sudo make prefix=/usr/local install</span><br></pre></td></tr></table></figure>
-<ol>
-<li>现在就基本上已经安装成功了，可以在终端上使用 $ git help 语句去测试下<br>注：坑能会有版本更新的问题，加入上方的代码无法执行，请<a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="external">点击这里</a>  </li>
-</ol>
-</li>
-</ol>
-<h3 id="二-git的初始化"><a href="#二-git的初始化" class="headerlink" title="二.git的初始化"></a>二.git的初始化</h3><p>下面的暂时还没写，过段时间我会再次进行更新！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/18/git的使用方法/" data-id="cinjsckno00006lgl2hyillc6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-我的博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/04/14/我的博客/" class="article-date">
-  <time datetime="2016-04-14T07:22:39.000Z" itemprop="datePublished">2016-04-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/14/我的博客/">我的博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>很开心！因为我的博客搭建成功了，虽然中间有各种各样的问题，但是最终结果依然是好的，是成功的。<br>没什么可说的，后续我会在将博客改进，到时候样式和文章都会多起来，以后就是我的博客就是我的第二个家了，我会常在这里添加一些我自己喜欢感兴趣的东西，例如技术、动漫、诗词等等，到时候诸君喜欢，我亦高兴，不喜也无悲，这只是我的个人爱好，无论怎样自己开心才是最重要的，至于其他的我就当清风拂岗，明月照江！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/14/我的博客/" data-id="cinjscknw00026lglsf65f0v1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
