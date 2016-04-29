@@ -129,13 +129,13 @@ UILongPressGestureRe">
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -167,7 +167,7 @@ UILongPressGestureRe">
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/DarkAngleWorld" title="GitHub"></a>
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa RSS" target="_blank" href="/“\atom.xml"" title="RSS"></a>
                             
                                 <a class="fa 简书" target="_blank" href="http://www.jianshu.com/users/d727262dd126/latest_articles" title="简书"></a>
                             
@@ -245,7 +245,7 @@ UILongPressGestureRe">
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/DarkAngleWorld" title="GitHub"></a>
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa RSS" target="_blank" href="/“\atom.xml"" title="RSS"></a>
                             
                                 <a class="fa 简书" target="_blank" href="http://www.jianshu.com/users/d727262dd126/latest_articles" title="简书"></a>
                             
@@ -253,7 +253,7 @@ UILongPressGestureRe">
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-iOS-添加手势" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -312,17 +312,17 @@ UILongPressGestureRe">
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/04/28/iOS-添加手势/">iOS 添加手势</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">坏坏</a></p>
-        <p><span>Created:</span>2016-04-28, 12:21:29</p>
-        <p><span>Updated:</span>2016-04-29, 18:08:15</p>
+        <p><span>本文标题:</span><a href="/2016/04/28/iOS-添加手势/">iOS 添加手势</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">坏坏</a></p>
+        <p><span>发布时间:</span>2016-04-28, 12:21:29</p>
+        <p><span>最后更新:</span>2016-04-29, 18:08:15</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/04/28/iOS-添加手势/" title="iOS 添加手势">http://yoursite.com/2016/04/28/iOS-添加手势/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/04/28/iOS-添加手势/　　By 坏坏" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/04/28/iOS-添加手势/" title="iOS 添加手势">http://yoursite.com/2016/04/28/iOS-添加手势/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/04/28/iOS-添加手势/　　作者: 坏坏" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -343,7 +343,7 @@ UILongPressGestureRe">
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
+    <strong class="toc-title">文章目录</strong>
     <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ios目前支持6中手势识别。"><span class="toc-number">1.</span> <span class="toc-text">ios目前支持6中手势识别。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#具体代码执行："><span class="toc-number">2.</span> <span class="toc-text">具体代码执行：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#点击手势"><span class="toc-number">2.1.</span> <span class="toc-text">点击手势</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#捏合手势"><span class="toc-number">2.2.</span> <span class="toc-text">捏合手势</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#拖动手势"><span class="toc-number">2.3.</span> <span class="toc-text">拖动手势</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#滑动手势"><span class="toc-number">2.4.</span> <span class="toc-text">滑动手势</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#旋转手势"><span class="toc-number">2.5.</span> <span class="toc-text">旋转手势</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#长按手势"><span class="toc-number">2.6.</span> <span class="toc-text">长按手势</span></a></li></ol></li></ol>
 </div>
 <style>
@@ -355,10 +355,10 @@ UILongPressGestureRe">
     }
 </style>
 
-<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 <script>
-    var valueHide = "Hide";
-    var valueShow = "Show";
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
 
     if ($(".left-col").is(":hidden")) {
         $("#tocButton").attr("value", valueShow);
@@ -421,13 +421,13 @@ UILongPressGestureRe">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/04/18/git的使用方法/" title="Next: git的使用">
+            <a href="/2016/04/18/git的使用方法/" title="下一篇: git的使用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -454,7 +454,7 @@ UILongPressGestureRe">
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >Site Visitors: 
+                        <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -464,7 +464,7 @@ UILongPressGestureRe">
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">Page Hits: 
+                        <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -497,9 +497,9 @@ UILongPressGestureRe">
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258860108'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258860108' type='text/javascript'%3E%3C/script%3E"));</script> 
