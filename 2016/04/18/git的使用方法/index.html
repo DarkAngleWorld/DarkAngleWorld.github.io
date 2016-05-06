@@ -21,7 +21,7 @@
 1234$ tar -zxf git-1.7.2.2.tar.gz$ cd git-1.7.2.2$ make prefix=/usr/local all$ sudo make prefix=/usr/local install
 
 现在就基本上已经安装成功了，可以在终端上使用 $ git help 语句去测试下注：坑能会有版本更">
-<meta property="og:updated_time" content="2016-05-04T08:17:08.000Z">
+<meta property="og:updated_time" content="2016-05-06T15:13:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git的使用">
 <meta name="twitter:description" content="git的使用一.git的安装
@@ -298,8 +298,22 @@
 <a id="more"></a>
 <h3 id="二-git的初始化配置"><a href="#二-git的初始化配置" class="headerlink" title="二.git的初始化配置"></a>二.git的初始化配置</h3><p>主要就写下用户名和Email就行了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;此处填写昵称&quot;</span><br><span class="line">$ git config --global user.email 此处填写邮箱</span><br></pre></td></tr></table></figure>
-<h3 id="三-git的简单操作"><a href="#三-git的简单操作" class="headerlink" title="三.git的简单操作"></a>三.git的简单操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone  http地址    //下载到本地（需要先cd 目录，选择下载到的地址，否则会默认下载到根目录下面）</span><br></pre></td></tr></table></figure>
-<p>下面的暂时还没写，过段时间我会再次进行更新！</p>
+<h3 id="三-git同步到本地"><a href="#三-git同步到本地" class="headerlink" title="三.git同步到本地"></a>三.git同步到本地</h3><h4 id="1-项目已存在，同步项目到本地"><a href="#1-项目已存在，同步项目到本地" class="headerlink" title="1. 项目已存在，同步项目到本地"></a>1. 项目已存在，同步项目到本地</h4><pre><code>. $ cd 目录地址             //第一步//选择下载到本地的地址，加入不写这句，会默认是当前的路径
+. $ git clone  http地址    //第二步//下载到本地
+</code></pre><h4 id="2-项目在本地，同步到云端"><a href="#2-项目在本地，同步到云端" class="headerlink" title="2. 项目在本地，同步到云端"></a>2. 项目在本地，同步到云端</h4><pre><code>. $ cd 项目目录地址             //第一步//选择项目地址
+. $ git remote rm origin      //第二步//移除项目本地线程分支
+. $ git remote add origin 项目https地址  //第三步//为本地项目添加远程连接
+. $ git pull --rebase origin master     //第四步//pull线程分支到本地
+. $ git push -u origin master           //第五步//提交本地项目到云端 
+</code></pre><h3 id="四-git的简单操作"><a href="#四-git的简单操作" class="headerlink" title="四.git的简单操作"></a>四.git的简单操作</h3><p>git提交修改的主要四步骤</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git add .             //添加所有修改的文件到索引</span><br><span class="line">$ git commit -m &quot;提交东西的注释介绍&quot;   //把add的文件进行本地缓存并加上注释介绍</span><br><span class="line">$ git pull              //同步远程的修改</span><br><span class="line">$ git push              //提交你的修改到当前分支</span><br></pre></td></tr></table></figure>
+<p>git的其他简单操作</p>
+<pre><code>. $ git status            //查询项目当前状态，例如当前分支是什么，是否需要提交等
+. $ git diff              //查询当前修改东西的详情 
+. $ git fecth             //同步远程分支到本地
+. $ git branch -a         //查看当前分支列表
+. $ git checkout 分支名称  //切换当前分支
+</code></pre><p>暂时只写这么多了，以后在进行修改添加</p>
 
       
     </div>
@@ -311,7 +325,7 @@
         <p><span>本文标题:</span><a href="/2016/04/18/git的使用方法/">git的使用</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">坏坏</a></p>
         <p><span>发布时间:</span>2016-04-18, 10:10:45</p>
-        <p><span>最后更新:</span>2016-05-04, 16:17:08</p>
+        <p><span>最后更新:</span>2016-05-06, 23:13:55</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/04/18/git的使用方法/" title="git的使用">http://yoursite.com/2016/04/18/git的使用方法/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/04/18/git的使用方法/　　作者: 坏坏" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -346,7 +360,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git的使用"><span class="toc-number">1.</span> <span class="toc-text">git的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-git的安装"><span class="toc-number">1.1.</span> <span class="toc-text">一.git的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-git的初始化配置"><span class="toc-number">1.2.</span> <span class="toc-text">二.git的初始化配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-git的简单操作"><span class="toc-number">1.3.</span> <span class="toc-text">三.git的简单操作</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git的使用"><span class="toc-number">1.</span> <span class="toc-text">git的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-git的安装"><span class="toc-number">1.1.</span> <span class="toc-text">一.git的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-git的初始化配置"><span class="toc-number">1.2.</span> <span class="toc-text">二.git的初始化配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-git同步到本地"><span class="toc-number">1.3.</span> <span class="toc-text">三.git同步到本地</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-项目已存在，同步项目到本地"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 项目已存在，同步项目到本地</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-项目在本地，同步到云端"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 项目在本地，同步到云端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-git的简单操作"><span class="toc-number">1.4.</span> <span class="toc-text">四.git的简单操作</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
