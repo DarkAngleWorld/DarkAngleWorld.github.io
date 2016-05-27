@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/22/iOS-TableView常用小知识/index.html">
 <meta property="og:site_name" content="坏坏的私家领地">
 <meta property="og:description" content="iOS开发了不少的项目，几乎每个项目都会用到tableview,同时经常直接使用系统的是不行的，我们经常对其进行修改他的各种属性，以来达到我们所想要的结果，但是虽然用过不少次，但是每次使用经常会忘记某些特殊功能该如何设置，每次都需要再次google，所以便有了这篇博客，本篇博客，只是针对iOS开发tableview的各个功能需求开发的一种详细介绍！">
-<meta property="og:updated_time" content="2016-05-27T10:50:04.000Z">
+<meta property="og:updated_time" content="2016-05-27T10:52:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS TableView常用小知识">
 <meta name="twitter:description" content="iOS开发了不少的项目，几乎每个项目都会用到tableview,同时经常直接使用系统的是不行的，我们经常对其进行修改他的各种属性，以来达到我们所想要的结果，但是虽然用过不少次，但是每次使用经常会忘记某些特殊功能该如何设置，每次都需要再次google，所以便有了这篇博客，本篇博客，只是针对iOS开发tableview的各个功能需求开发的一种详细介绍！">
@@ -312,14 +312,23 @@
 <p>//一个section刷新<br>NSIndexSet <em>indexSet=[[NSIndexSet alloc]initWithIndex:2];<br>[tableview reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];<br>//一个cell刷新<br>NSIndexPath </em>indexPath=[NSIndexPath indexPathForRow:3 inSection:0];<br>[tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];</p>
 </li>
 <li><p>分割线左右对齐全屏显示</p>
-<p>-(void)tableView:(UITableView <em>)tableView willDisplayCell:(UITableViewCell </em>)cell forRowAtIndexPath:(NSIndexPath *)indexPath<br>{<br> //分割线左右对齐全屏<br> if ([cell respondsToSelector:@selector(setSeparatorInset:)])<br> {</p>
-<pre><code>[cell setSeparatorInset:UIEdgeInsetsZero];
-</code></pre><p> }<br> if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)])<br> {</p>
-<pre><code>[cell setPreservesSuperviewLayoutMargins:NO];
-</code></pre><p> }<br> if ([cell respondsToSelector:@selector(setLayoutMargins:)])<br> {</p>
-<pre><code>[cell setLayoutMargins:UIEdgeInsetsZero];
-</code></pre><p> }<br>}</p>
-</li>
+<pre><code>-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+ //分割线左右对齐全屏
+ if ([cell respondsToSelector:@selector(setSeparatorInset:)])
+ {
+     [cell setSeparatorInset:UIEdgeInsetsZero];
+ }
+ if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)])
+ {
+     [cell setPreservesSuperviewLayoutMargins:NO];
+ }
+ if ([cell respondsToSelector:@selector(setLayoutMargins:)])
+ {
+     [cell setLayoutMargins:UIEdgeInsetsZero];
+ }
+}
+</code></pre></li>
 </ol>
 
       
@@ -332,7 +341,7 @@
         <p><span>本文标题:</span><a href="/2016/05/22/iOS-TableView常用小知识/">iOS TableView常用小知识</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">坏坏</a></p>
         <p><span>发布时间:</span>2016-05-22, 20:05:42</p>
-        <p><span>最后更新:</span>2016-05-27, 18:50:04</p>
+        <p><span>最后更新:</span>2016-05-27, 18:52:07</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/22/iOS-TableView常用小知识/" title="iOS TableView常用小知识">http://yoursite.com/2016/05/22/iOS-TableView常用小知识/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/05/22/iOS-TableView常用小知识/　　作者: 坏坏" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
