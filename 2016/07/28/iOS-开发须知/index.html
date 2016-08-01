@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/07/28/iOS-开发须知/index.html">
 <meta property="og:site_name" content="坏坏">
 <meta property="og:description" content="本篇文章主要是给自己的一个提醒，期望自己每次开发项目之前看下，以防止犯一些小错误，和走一些冤枉路，不喜勿喷！">
-<meta property="og:updated_time" content="2016-08-01T04:16:00.000Z">
+<meta property="og:updated_time" content="2016-08-01T04:17:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 开发须知">
 <meta name="twitter:description" content="本篇文章主要是给自己的一个提醒，期望自己每次开发项目之前看下，以防止犯一些小错误，和走一些冤枉路，不喜勿喷！">
@@ -273,8 +273,8 @@
           
         <p>本篇文章主要是给自己的一个提醒，期望自己每次开发项目之前看下，以防止犯一些小错误，和走一些冤枉路，不喜勿喷！</p>
 <a id="more"></a>
-<h4 id="1-网路安全协议设置"><a href="#1-网路安全协议设置" class="headerlink" title="1.网路安全协议设置"></a>1.网路安全协议设置</h4><p>首先注意公司服务器地址和项目中是否用到http请求，因为iOS·9 默认为https请求，假如非https地址，请在info设置App Transport Security Settings允许http请求；</p>
-<h4 id="2-URL-Scheme设置"><a href="#2-URL-Scheme设置" class="headerlink" title="2.URL Scheme设置"></a>2.URL Scheme设置</h4><p>注意自己项目中是否需要进行项目跳转，例如分享之类的，需要设置URL Types,但是iOS·9 以后需要同时在info中设置LSApplicationQueriesSchemes</p>
+<h3 id="1-网路安全协议设置"><a href="#1-网路安全协议设置" class="headerlink" title="1.网路安全协议设置"></a>1.网路安全协议设置</h3><p>首先注意公司服务器地址和项目中是否用到http请求，因为iOS·9 默认为https请求，假如非https地址，请在info设置App Transport Security Settings允许http请求；</p>
+<h3 id="2-URL-Scheme设置"><a href="#2-URL-Scheme设置" class="headerlink" title="2.URL Scheme设置"></a>2.URL Scheme设置</h3><p>注意自己项目中是否需要进行项目跳转，例如分享之类的，需要设置URL Types,但是iOS·9 以后需要同时在info中设置LSApplicationQueriesSchemes</p>
 <h4 id="3-宏定义设置"><a href="#3-宏定义设置" class="headerlink" title="3.宏定义设置"></a>3.宏定义设置</h4><pre><code>尽量将一些后期可能会修改又经常会用到的东西，例如网址base，和一些第三方的key值等设为宏定义，但是要注意，网址在设置宏定义时，要注意设置成两种状态：一种是debug模式，一种是release模式，debug设置线下即测试网址，release设置线上网址，这样在提交AppStore就不会因为忘记而导致发布版本为测试网址（这是血和泪的教训）
 </code></pre><h4 id="4-图片的添加"><a href="#4-图片的添加" class="headerlink" title="4.图片的添加"></a>4.图片的添加</h4><pre><code>图片的添加，尽量使用.xcassets文件，这个可以自动适配图片，只是需要自己手动一个一个导入，但是辛苦一时，幸福一世啊，以后想要更改图片直接去对应图片去替换就行，不需要在进行其他操作。
 </code></pre><h4 id="5-界面主体"><a href="#5-界面主体" class="headerlink" title="5.界面主体"></a>5.界面主体</h4><pre><code>界面，目前我的设计是，尽量在Controller上添加Scrollview视图，这样通过auto约束，就不会有因为自己的粗心大意导致适配出现问题某些视图无法观看
@@ -290,7 +290,7 @@
         <p><span>本文标题:</span><a href="/2016/07/28/iOS-开发须知/">iOS 开发须知</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">坏坏</a></p>
         <p><span>发布时间:</span>2016-07-28, 11:16:56</p>
-        <p><span>最后更新:</span>2016-08-01, 12:16:00</p>
+        <p><span>最后更新:</span>2016-08-01, 12:17:18</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/28/iOS-开发须知/" title="iOS 开发须知">http://yoursite.com/2016/07/28/iOS-开发须知/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/28/iOS-开发须知/　　作者: 坏坏" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -325,7 +325,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-网路安全协议设置"><span class="toc-number">1.</span> <span class="toc-text">1.网路安全协议设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-URL-Scheme设置"><span class="toc-number">2.</span> <span class="toc-text">2.URL Scheme设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-宏定义设置"><span class="toc-number">3.</span> <span class="toc-text">3.宏定义设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-图片的添加"><span class="toc-number">4.</span> <span class="toc-text">4.图片的添加</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-界面主体"><span class="toc-number">5.</span> <span class="toc-text">5.界面主体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-界面的构造"><span class="toc-number">6.</span> <span class="toc-text">5.界面的构造</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-网路安全协议设置"><span class="toc-number">1.</span> <span class="toc-text">1.网路安全协议设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-URL-Scheme设置"><span class="toc-number">2.</span> <span class="toc-text">2.URL Scheme设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-宏定义设置"><span class="toc-number">2.1.</span> <span class="toc-text">3.宏定义设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-图片的添加"><span class="toc-number">2.2.</span> <span class="toc-text">4.图片的添加</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-界面主体"><span class="toc-number">2.3.</span> <span class="toc-text">5.界面主体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-界面的构造"><span class="toc-number">2.4.</span> <span class="toc-text">5.界面的构造</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
