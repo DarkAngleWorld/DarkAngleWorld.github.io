@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>iOS 项目开始前须知 | 坏坏</title>
+  <title>iOS 开发须知 | 坏坏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本篇文章主要是给自己的一个提醒，期望自己每次开发项目之前看下，以防止犯一些小错误，和走一些冤枉路，不喜勿喷！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS 项目开始前须知">
-<meta property="og:url" content="http://yoursite.com/2016/07/28/iOS-项目开始前须知/index.html">
+<meta property="og:title" content="iOS 开发须知">
+<meta property="og:url" content="http://yoursite.com/2016/07/28/iOS-开发须知/index.html">
 <meta property="og:site_name" content="坏坏">
 <meta property="og:description" content="本篇文章主要是给自己的一个提醒，期望自己每次开发项目之前看下，以防止犯一些小错误，和走一些冤枉路，不喜勿喷！">
-<meta property="og:updated_time" content="2016-07-28T07:00:45.000Z">
+<meta property="og:updated_time" content="2016-08-01T04:14:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS 项目开始前须知">
+<meta name="twitter:title" content="iOS 开发须知">
 <meta name="twitter:description" content="本篇文章主要是给自己的一个提醒，期望自己每次开发项目之前看下，以防止犯一些小错误，和走一些冤枉路，不喜勿喷！">
   
     <link rel="alternative" href="/atom.xml" title="坏坏" type="application/atom+xml">
@@ -111,13 +111,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -231,12 +231,12 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-iOS-项目开始前须知" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-iOS-开发须知" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/28/iOS-项目开始前须知/" class="article-date">
+      <a href="/2016/07/28/iOS-开发须知/" class="article-date">
       <time datetime="2016-07-28T03:16:56.000Z" itemprop="datePublished">2016-07-28</time>
 </a>
     </div>
@@ -250,7 +250,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      iOS 项目开始前须知
+      iOS 开发须知
     </h1>
   
 
@@ -273,15 +273,13 @@
           
         <p>本篇文章主要是给自己的一个提醒，期望自己每次开发项目之前看下，以防止犯一些小错误，和走一些冤枉路，不喜勿喷！</p>
 <a id="more"></a>
-<ol>
-<li>首先注意公司服务器地址和项目中是否用到http请求，因为iOS·9 默认为https请求，假如非https地址，请在info设置App Transport Security Settings允许http请求；</li>
-<li>注意自己项目中是否需要进行项目跳转，例如分享之类的，需要设置URL Types,但是iOS·9 以后需要同时在info中设置LSApplicationQueriesSchemes</li>
-<li>尽量将一些后期可能会修改又经常会用到的东西，例如网址base，和一些第三方的key值等设为宏定义，但是要注意，网址在设置宏定义时，要注意设置成两种状态：一种是debug模式，一种是release模式，debug设置线下即测试网址，release设置线上网址，这样在提交AppStore就不会因为忘记而导致发布版本为测试网址（这是血和泪的教训）</li>
-<li>图片的添加，尽量使用.xcassets文件，这个可以自动适配图片，只是需要自己手动一个一个导入，但是辛苦一时，幸福一世啊，以后想要更改图片直接去对应图片去替换就行，不需要在进行其他操作。</li>
-<li>界面，目前我的设计是，尽量在Controller上添加Scrollview视图，这样通过auto约束，就不会有因为自己的粗心大意导致适配出现问题某些视图无法观看</li>
-<li>UI的布局，尽量将各个视图抽象化独立化，达到高内聚低耦合，这样当一个视图删除或者添加，只需要直接添加或者直接移除，而下方视图只需要自动上移或者下降就可。</li>
-</ol>
-
+<h4 id="1-网路安全协议设置"><a href="#1-网路安全协议设置" class="headerlink" title="1.网路安全协议设置"></a>1.网路安全协议设置</h4><pre><code>首先注意公司服务器地址和项目中是否用到http请求，因为iOS·9 默认为https请求，假如非https地址，请在info设置App Transport Security Settings允许http请求；
+</code></pre><h4 id="2-URL-Scheme设置"><a href="#2-URL-Scheme设置" class="headerlink" title="2.URL Scheme设置"></a>2.URL Scheme设置</h4><pre><code>注意自己项目中是否需要进行项目跳转，例如分享之类的，需要设置URL Types,但是iOS·9 以后需要同时在info中设置LSApplicationQueriesSchemes
+</code></pre><h4 id="3-宏定义设置"><a href="#3-宏定义设置" class="headerlink" title="3.宏定义设置"></a>3.宏定义设置</h4><pre><code>尽量将一些后期可能会修改又经常会用到的东西，例如网址base，和一些第三方的key值等设为宏定义，但是要注意，网址在设置宏定义时，要注意设置成两种状态：一种是debug模式，一种是release模式，debug设置线下即测试网址，release设置线上网址，这样在提交AppStore就不会因为忘记而导致发布版本为测试网址（这是血和泪的教训）
+</code></pre><h4 id="4-图片的添加"><a href="#4-图片的添加" class="headerlink" title="4.图片的添加"></a>4.图片的添加</h4><pre><code>图片的添加，尽量使用.xcassets文件，这个可以自动适配图片，只是需要自己手动一个一个导入，但是辛苦一时，幸福一世啊，以后想要更改图片直接去对应图片去替换就行，不需要在进行其他操作。
+</code></pre><h4 id="5-界面主体"><a href="#5-界面主体" class="headerlink" title="5.界面主体"></a>5.界面主体</h4><pre><code>界面，目前我的设计是，尽量在Controller上添加Scrollview视图，这样通过auto约束，就不会有因为自己的粗心大意导致适配出现问题某些视图无法观看
+</code></pre><h4 id="5-界面的构造"><a href="#5-界面的构造" class="headerlink" title="5.界面的构造"></a>5.界面的构造</h4><pre><code>UI的布局，尽量将各个视图抽象化独立化，达到高内聚低耦合，这样当一个视图删除或者添加，只需要直接添加或者直接移除，而下方视图只需要自动上移或者下降就可。
+</code></pre>
       
     </div>
     
@@ -289,17 +287,17 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/28/iOS-项目开始前须知/">iOS 项目开始前须知</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">坏坏</a></p>
-        <p><span>发布时间:</span>2016-07-28, 11:16:56</p>
-        <p><span>最后更新:</span>2016-07-28, 15:00:45</p>
+        <p><span>Title:</span><a href="/2016/07/28/iOS-开发须知/">iOS 开发须知</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">坏坏</a></p>
+        <p><span>Created:</span>2016-07-28, 11:16:56</p>
+        <p><span>Updated:</span>2016-08-01, 12:14:15</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/28/iOS-项目开始前须知/" title="iOS 项目开始前须知">http://yoursite.com/2016/07/28/iOS-项目开始前须知/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/28/iOS-项目开始前须知/　　作者: 坏坏" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/07/28/iOS-开发须知/" title="iOS 开发须知">http://yoursite.com/2016/07/28/iOS-开发须知/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/07/28/iOS-开发须知/　　By 坏坏" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -326,8 +324,8 @@
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
+    <strong class="toc-title">Contents</strong>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-网路安全协议设置"><span class="toc-number">1.</span> <span class="toc-text">1.网路安全协议设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-URL-Scheme设置"><span class="toc-number">2.</span> <span class="toc-text">2.URL Scheme设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-宏定义设置"><span class="toc-number">3.</span> <span class="toc-text">3.宏定义设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-图片的添加"><span class="toc-number">4.</span> <span class="toc-text">4.图片的添加</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-界面主体"><span class="toc-number">5.</span> <span class="toc-text">5.界面主体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-界面的构造"><span class="toc-number">6.</span> <span class="toc-text">5.界面的构造</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -338,10 +336,10 @@
     }
 </style>
 
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 <script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
+    var valueHide = "Hide";
+    var valueShow = "Show";
 
     if ($(".left-col").is(":hidden")) {
         $("#tocButton").attr("value", valueShow);
@@ -384,7 +382,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"iOS 项目开始前须知　| 坏坏　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"iOS 开发须知　| 坏坏　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -400,7 +398,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/07/28/iOS-项目开始前须知/" data-title="iOS 项目开始前须知" data-url="http://yoursite.com/2016/07/28/iOS-项目开始前须知/"></div>
+    <div class="ds-thread" data-thread-key="2016/07/28/iOS-开发须知/" data-title="iOS 开发须知" data-url="http://yoursite.com/2016/07/28/iOS-开发须知/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -424,21 +422,21 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/28/iOS-项目提交AppStore前注意事项/" title="上一篇: iOS 项目提交AppStore前注意事项">
+            <a href="/2016/07/28/iOS-项目提交AppStore前注意事项/" title="Pre: iOS 项目提交AppStore前注意事项">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/25/iOS中-import、-include和-class的使用/" title="下一篇: iOS中#import、#include和#class的使用">
+            <a href="/2016/07/25/iOS中-import、-include和-class的使用/" title="Next: iOS中#import、#include和#class的使用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/iOS-项目提交AppStore前注意事项/">iOS 项目提交AppStore前注意事项</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/iOS-项目开始前须知/">iOS 项目开始前须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/25/iOS中-import、-include和-class的使用/">iOS中#import、#include和#class的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/14/App-上传视频预览和屏幕快照配置/">App 上传屏幕快照</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/MarkDown-简单使用/">MarkDown 简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/iOS-启动页image大小/">iOS 启动页image大小</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/22/iOS-TableView常用小知识/">iOS TableView常用小知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/06/动漫语录-二/">动漫语录<二></a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/06/散文美句/">散文美句</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/04/诗歌语录/">诗歌语录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/04/小说语录/">小说语录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/04/动漫语录-一/">动漫语录<一></a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/28/iOS-添加手势/">iOS 添加手势</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/18/git的使用方法/">git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/我的博客/">我的博客</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/iOS-项目提交AppStore前注意事项/">iOS 项目提交AppStore前注意事项</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/iOS-开发须知/">iOS 开发须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/25/iOS中-import、-include和-class的使用/">iOS中#import、#include和#class的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/14/App-上传视频预览和屏幕快照配置/">App 上传屏幕快照</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/MarkDown-简单使用/">MarkDown 简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/iOS-启动页image大小/">iOS 启动页image大小</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/22/iOS-TableView常用小知识/">iOS TableView常用小知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/06/动漫语录-二/">动漫语录<二></a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/06/散文美句/">散文美句</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/04/诗歌语录/">诗歌语录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/04/小说语录/">小说语录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/04/动漫语录-一/">动漫语录<一></a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/28/iOS-添加手势/">iOS 添加手势</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/18/git的使用方法/">git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/我的博客/">我的博客</a></li></ul>
 
 
 
@@ -459,7 +457,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
+                        <span id="site-visit" >Site Visitors: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -469,7 +467,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
+                        <span id="page-visit">Page Hits: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -502,9 +500,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258860108'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258860108' type='text/javascript'%3E%3C/script%3E"));</script> 
