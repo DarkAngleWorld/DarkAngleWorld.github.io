@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/07/28/iOS-开发须知/index.html">
 <meta property="og:site_name" content="坏坏">
 <meta property="og:description" content="一些开发前需要知道的一些知识，目前处于完善期，所以可能排版不是很正规，后续会逐渐完善。欢迎各路朋友前来参观指导！">
-<meta property="og:updated_time" content="2016-08-01T06:07:54.000Z">
+<meta property="og:updated_time" content="2016-08-01T10:12:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 开发须知">
 <meta name="twitter:description" content="一些开发前需要知道的一些知识，目前处于完善期，所以可能排版不是很正规，后续会逐渐完善。欢迎各路朋友前来参观指导！">
@@ -111,13 +111,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -231,7 +231,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-iOS-开发须知" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -275,19 +275,39 @@
 <a id="more"></a>
 <h3 id="1-设置编码风格规范"><a href="#1-设置编码风格规范" class="headerlink" title="1.设置编码风格规范"></a>1.设置编码风格规范</h3><p>每个人都有每个人的编码风格，加入我们都按照自己的习惯了会导致一个项目会有不同的风格，导致代码的可读性下降，所以为了更好的开发项目，提高代码的可读性，我们必须要统一编码风格，一次需要一个编码风格规范，我在下面导入两个链接，是一些公司开源ios和swift的编码规范，大家可以看下，自己去根据自己需要制定合适编码风格规范</p>
 <ul>
-<li>这是OC的代码规范:<a href="https://github.com/NYTimes/objective-c-style-guide" target="_blank" rel="external">NYTimes/objective-c-style-guide</a></li>
+<li>这是OC的代码规范:<ul>
+<li>英文：<a href="https://github.com/NYTimes/objective-c-style-guide" target="_blank" rel="external">NYTimes/objective-c-style-guide</a></li>
+<li>中文：<a href="https://calvingit.gitbooks.io/appscomm-coding-guidelines-for-cocoa/content/" target="_blank" rel="external">乐源移动开发团队 iOS 开发规范</a></li>
+</ul>
+</li>
 <li>这是swift的代码规范(2个):<ul>
-<li><a href="http://codebuild.me/2015/09/14/raywenderlich-swift-style-guide/" target="_blank" rel="external">RayWenderlich 官方 Swift 风格指南</a></li>
-<li><a href="https://github.com/github/swift-style-guide" target="_blank" rel="external">swift-style-guide</a></li>
+<li>中文：<a href="http://codebuild.me/2015/09/14/raywenderlich-swift-style-guide/" target="_blank" rel="external">RayWenderlich 官方 Swift 风格指南</a></li>
+<li>英文：<a href="https://github.com/github/swift-style-guide" target="_blank" rel="external">swift-style-guide</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="2-URL-Scheme设置"><a href="#2-URL-Scheme设置" class="headerlink" title="2.URL Scheme设置"></a>2.URL Scheme设置</h3><p>注意自己项目中是否需要进行项目跳转，例如分享之类的，需要设置URL Types,但是iOS·9 以后需要同时在info中设置LSApplicationQueriesSchemes</p>
-<h3 id="3-宏定义设置"><a href="#3-宏定义设置" class="headerlink" title="3.宏定义设置"></a>3.宏定义设置</h3><p>尽量将一些后期可能会修改又经常会用到的东西，例如网址base，和一些第三方的key值等设为宏定义，但是要注意，网址在设置宏定义时，要注意设置成两种状态：一种是debug模式，一种是release模式，debug设置线下即测试网址，release设置线上网址，这样在提交AppStore就不会因为忘记而导致发布版本为测试网址（这是血和泪的教训）</p>
-<h3 id="4-图片的添加"><a href="#4-图片的添加" class="headerlink" title="4.图片的添加"></a>4.图片的添加</h3><p>图片的添加，尽量使用.xcassets文件，这个可以自动适配图片，只是需要自己手动一个一个导入，但是辛苦一时，幸福一世啊，以后想要更改图片直接去对应图片去替换就行，不需要在进行其他操作。</p>
-<h3 id="5-界面主体"><a href="#5-界面主体" class="headerlink" title="5.界面主体"></a>5.界面主体</h3><p>界面，目前我的设计是，尽量在Controller上添加Scrollview视图，这样通过auto约束，就不会有因为自己的粗心大意导致适配出现问题某些视图无法观看</p>
-<h3 id="6-界面的构造"><a href="#6-界面的构造" class="headerlink" title="6.界面的构造"></a>6.界面的构造</h3><p>UI的布局，尽量将各个视图抽象化独立化，达到高内聚低耦合，这样当一个视图删除或者添加，只需要直接添加或者直接移除，而下方视图只需要自动上移或者下降就可。</p>
-<h3 id="7-网路安全协议设置"><a href="#7-网路安全协议设置" class="headerlink" title="7.网路安全协议设置"></a>7.网路安全协议设置</h3><p>首先注意公司服务器地址和项目中是否用到http请求，因为iOS·9 默认为https请求，假如非https地址，请在info设置App Transport Security Settings允许http请求；</p>
+<h3 id="2-确定项目架构"><a href="#2-确定项目架构" class="headerlink" title="2.确定项目架构"></a>2.确定项目架构</h3><p>一个好的架构可提高项目的可读性，拓展性，维护性等等，所以选择一个好的项目架构很有必要，架构有很多，例如：MVC、MVVM、MVP等等，好坏参半，没有最好的只有更适合的！下面我介绍一点资料然后大家自己去看，去选择适合自己项目的架构！</p>
+<ul>
+<li>中文版<a href="https://www.objc.io/issues/13-architecture/" target="_blank" rel="external">Architecture</a></li>
+<li>英文版：<a href="http://www.cocoachina.com/ios/20160108/14916.html" target="_blank" rel="external">iOS 架构模式–解密 MVC，MVP，MVVM以及VIPER架构</a></li>
+<li>英文版：<a href="https://slack-files.com/T051G5Y6D-F0HABHKDK-8e9141e191" target="_blank" rel="external">Modern application architectures (Reactive programming, MVVM and beyond)
+</a></li>
+</ul>
+<h3 id="3-设计项目的目录结构"><a href="#3-设计项目的目录结构" class="headerlink" title="3.设计项目的目录结构"></a>3.设计项目的目录结构</h3><p>预先设定好项目内文件夹结构，是项目更加具有条理性，和易读性。</p>
+<ul>
+<li>类似的结构案例请看<a href="https://calvingit.gitbooks.io/appscomm-coding-guidelines-for-cocoa/content/Xcode_Project.html" target="_blank" rel="external">乐源移动开发团队-目录结构</a></li>
+</ul>
+<h3 id="4-URL-Scheme设置"><a href="#4-URL-Scheme设置" class="headerlink" title="4.URL Scheme设置"></a>4.URL Scheme设置</h3><p>注意自己项目中是否需要进行项目跳转，例如分享之类的，需要设置URL Types,但是iOS·9 以后需要同时在info中设置LSApplicationQueriesSchemes</p>
+<h3 id="5-宏定义设置"><a href="#5-宏定义设置" class="headerlink" title="5.宏定义设置"></a>5.宏定义设置</h3><p>尽量将一些后期可能会修改又经常会用到的东西，例如网址base，和一些第三方的key值等设为宏定义，但是要注意，网址在设置宏定义时，要注意设置成两种状态：一种是debug模式，一种是release模式，debug设置线下即测试网址，release设置线上网址，这样在提交AppStore就不会因为忘记而导致发布版本为测试网址（这是血和泪的教训）</p>
+<h3 id="6-图片的添加"><a href="#6-图片的添加" class="headerlink" title="6.图片的添加"></a>6.图片的添加</h3><p>图片的添加，尽量使用.xcassets文件，这个可以自动适配图片，只是需要自己手动一个一个导入，但是辛苦一时，幸福一世啊，以后想要更改图片直接去对应图片去替换就行，不需要在进行其他操作。</p>
+<h3 id="7-界面主体"><a href="#7-界面主体" class="headerlink" title="7.界面主体"></a>7.界面主体</h3><p>界面，目前我的设计是，尽量在Controller上添加Scrollview视图，这样通过auto约束，就不会有因为自己的粗心大意导致适配出现问题某些视图无法观看</p>
+<h3 id="8-界面的构造"><a href="#8-界面的构造" class="headerlink" title="8.界面的构造"></a>8.界面的构造</h3><p>UI的布局，尽量将各个视图抽象化独立化，达到高内聚低耦合，这样当一个视图删除或者添加，只需要直接添加或者直接移除，而下方视图只需要自动上移或者下降就可。</p>
+<h3 id="9-网路安全协议设置"><a href="#9-网路安全协议设置" class="headerlink" title="9.网路安全协议设置"></a>9.网路安全协议设置</h3><p>首先注意公司服务器地址和项目中是否用到http请求，因为iOS·9 默认为https请求，假如非https地址，请在info设置App Transport Security Settings允许http请求；</p>
+<h3 id="10-项目依赖管理"><a href="#10-项目依赖管理" class="headerlink" title="10.项目依赖管理"></a>10.项目依赖管理</h3><p>第三方以来一个一个去下载和更新版本事件是个费劲和容易出错的事，所以使用使用依赖工具必将方便，目前我使用的是 CocoaPods。</p>
+<h3 id="11-证书配置"><a href="#11-证书配置" class="headerlink" title="11.证书配置"></a>11.证书配置</h3><p>不多说链接说话，自己去谷歌自动翻译吧</p>
+<ul>
+<li>英文版：<a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html" target="_blank" rel="external">应用发布指南–苹果原生文档</a></li>
+</ul>
 
       
     </div>
@@ -296,17 +316,17 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/07/28/iOS-开发须知/">iOS 开发须知</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">坏坏</a></p>
-        <p><span>Created:</span>2016-07-28, 11:16:56</p>
-        <p><span>Updated:</span>2016-08-01, 14:07:54</p>
+        <p><span>本文标题:</span><a href="/2016/07/28/iOS-开发须知/">iOS 开发须知</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">坏坏</a></p>
+        <p><span>发布时间:</span>2016-07-28, 11:16:56</p>
+        <p><span>最后更新:</span>2016-08-01, 18:12:19</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/07/28/iOS-开发须知/" title="iOS 开发须知">http://yoursite.com/2016/07/28/iOS-开发须知/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/07/28/iOS-开发须知/　　By 坏坏" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/28/iOS-开发须知/" title="iOS 开发须知">http://yoursite.com/2016/07/28/iOS-开发须知/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/28/iOS-开发须知/　　作者: 坏坏" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -333,8 +353,8 @@
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-设置编码风格规范"><span class="toc-number">1.</span> <span class="toc-text">1.设置编码风格规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-URL-Scheme设置"><span class="toc-number">2.</span> <span class="toc-text">2.URL Scheme设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-宏定义设置"><span class="toc-number">3.</span> <span class="toc-text">3.宏定义设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-图片的添加"><span class="toc-number">4.</span> <span class="toc-text">4.图片的添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-界面主体"><span class="toc-number">5.</span> <span class="toc-text">5.界面主体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-界面的构造"><span class="toc-number">6.</span> <span class="toc-text">6.界面的构造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-网路安全协议设置"><span class="toc-number">7.</span> <span class="toc-text">7.网路安全协议设置</span></a></li></ol>
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-设置编码风格规范"><span class="toc-number">1.</span> <span class="toc-text">1.设置编码风格规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-确定项目架构"><span class="toc-number">2.</span> <span class="toc-text">2.确定项目架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-设计项目的目录结构"><span class="toc-number">3.</span> <span class="toc-text">3.设计项目的目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-URL-Scheme设置"><span class="toc-number">4.</span> <span class="toc-text">4.URL Scheme设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-宏定义设置"><span class="toc-number">5.</span> <span class="toc-text">5.宏定义设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-图片的添加"><span class="toc-number">6.</span> <span class="toc-text">6.图片的添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-界面主体"><span class="toc-number">7.</span> <span class="toc-text">7.界面主体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-界面的构造"><span class="toc-number">8.</span> <span class="toc-text">8.界面的构造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-网路安全协议设置"><span class="toc-number">9.</span> <span class="toc-text">9.网路安全协议设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-项目依赖管理"><span class="toc-number">10.</span> <span class="toc-text">10.项目依赖管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-证书配置"><span class="toc-number">11.</span> <span class="toc-text">11.证书配置</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -345,10 +365,10 @@
     }
 </style>
 
-<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 <script>
-    var valueHide = "Hide";
-    var valueShow = "Show";
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
 
     if ($(".left-col").is(":hidden")) {
         $("#tocButton").attr("value", valueShow);
@@ -431,15 +451,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/28/iOS-项目提交AppStore前注意事项/" title="Pre: iOS 项目提交AppStore前注意事项">
+            <a href="/2016/07/28/iOS-项目提交AppStore前注意事项/" title="上一篇: iOS 项目提交AppStore前注意事项">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/25/iOS中-import、-include和-class的使用/" title="Next: iOS中#import、#include和#class的使用">
+            <a href="/2016/07/25/iOS中-import、-include和-class的使用/" title="下一篇: iOS中#import、#include和#class的使用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -466,7 +486,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >Site Visitors: 
+                        <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -476,7 +496,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">Page Hits: 
+                        <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -509,9 +529,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258860108'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258860108' type='text/javascript'%3E%3C/script%3E"));</script> 
