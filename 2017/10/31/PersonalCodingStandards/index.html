@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/31/PersonalCodingStandards/index.html">
 <meta property="og:site_name" content="坏坏">
 <meta property="og:description" content="&amp;#x67B6;&amp;#x6784;&amp;#x8BBE;&amp;#x8BA1;&amp;#x539F;&amp;#x5219;:&amp;#x81EA;&amp;#x9876;&amp;#x5411;&amp;#x4E0B;&amp;#x8BBE;&amp;#x8BA1;&amp;#xFF08;1&amp;#xFF0C;2&amp;#xFF0C;3&amp;#xFF0C;4&amp;#x6B65;&amp;#xFF09;&amp;#xFF0C;&amp;#x81EA;&amp;#x5E95;&amp;#x5411;&amp;#x4E0A;&amp;#x5B9E;&amp;#x">
-<meta property="og:updated_time" content="2017-11-01T03:14:27.000Z">
+<meta property="og:updated_time" content="2017-11-01T03:19:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人编码风格规范">
 <meta name="twitter:description" content="&amp;#x67B6;&amp;#x6784;&amp;#x8BBE;&amp;#x8BA1;&amp;#x539F;&amp;#x5219;:&amp;#x81EA;&amp;#x9876;&amp;#x5411;&amp;#x4E0B;&amp;#x8BBE;&amp;#x8BA1;&amp;#xFF08;1&amp;#xFF0C;2&amp;#xFF0C;3&amp;#xFF0C;4&amp;#x6B65;&amp;#xFF09;&amp;#xFF0C;&amp;#x81EA;&amp;#x5E95;&amp;#x5411;&amp;#x4E0A;&amp;#x5B9E;&amp;#x">
@@ -286,19 +286,13 @@
 <li>&#x9AD8;&#x6027;&#x80FD;</li>
 </ol>
 </blockquote>
-<h3 id="&#x5F00;&#x53D1;&#x89C4;&#x8303;"><a href="#&#x5F00;&#x53D1;&#x89C4;&#x8303;" class="headerlink" title="&#x5F00;&#x53D1;&#x89C4;&#x8303;"></a>&#x5F00;&#x53D1;&#x89C4;&#x8303;</h3><ol>
-<li><p>View&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x7684;&#x89C4;&#x5B9A;</p>
-<ol>
+<h3 id="View&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x7684;&#x89C4;&#x5B9A;"><a href="#View&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x7684;&#x89C4;&#x5B9A;" class="headerlink" title="View&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x7684;&#x89C4;&#x5B9A;"></a>View&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x7684;&#x89C4;&#x5B9A;</h3><ol>
 <li><p>&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x4F7F;&#x7528;getter&#x548C;setter</p>
-<blockquote>
-<p>&#x4E0D;&#x8981;&#x5728;viewDidLoad&#x91CC;&#x9762;&#x521D;&#x59CB;&#x5316;&#x4F60;&#x7684;view&#x7136;&#x540E;&#x518D;add&#xFF0C;&#x8FD9;&#x6837;&#x4EE3;&#x7801;&#x5C31;&#x5F88;&#x96BE;&#x770B;&#x3002;&#x5728;viewDidload&#x91CC;&#x9762;&#x53EA;&#x505A;addSubview&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x7136;&#x540E;&#x5728;viewWillAppear&#x91CC;&#x9762;&#x505A;&#x5E03;&#x5C40;&#x7684;&#x4E8B;&#x60C5;&#xFF08;&#x52D8;&#x8BEF;1&#xFF09;&#xFF0C;&#x6700;&#x540E;&#x5728;viewDidAppear&#x91CC;&#x9762;&#x505A;Notification&#x7684;&#x76D1;&#x542C;&#x4E4B;&#x7C7B;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x81F3;&#x4E8E;&#x5C5E;&#x6027;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5219;&#x4EA4;&#x7ED9;getter&#x53BB;&#x505A;</p>
-</blockquote>
-</li>
+<pre><code>&gt; &#x4E0D;&#x8981;&#x5728;viewDidLoad&#x91CC;&#x9762;&#x521D;&#x59CB;&#x5316;&#x4F60;&#x7684;view&#x7136;&#x540E;&#x518D;add&#xFF0C;&#x8FD9;&#x6837;&#x4EE3;&#x7801;&#x5C31;&#x5F88;&#x96BE;&#x770B;&#x3002;&#x5728;viewDidload&#x91CC;&#x9762;&#x53EA;&#x505A;addSubview&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x7136;&#x540E;&#x5728;viewWillAppear&#x91CC;&#x9762;&#x505A;&#x5E03;&#x5C40;&#x7684;&#x4E8B;&#x60C5;&#xFF08;&#x52D8;&#x8BEF;1&#xFF09;&#xFF0C;&#x6700;&#x540E;&#x5728;viewDidAppear&#x91CC;&#x9762;&#x505A;Notification&#x7684;&#x76D1;&#x542C;&#x4E4B;&#x7C7B;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x81F3;&#x4E8E;&#x5C5E;&#x6027;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5219;&#x4EA4;&#x7ED9;getter&#x53BB;&#x505A;
+</code></pre></li>
 <li>&#x6BCF;&#x4E00;&#x4E2A;delegate&#x90FD;&#x628A;&#x5BF9;&#x5E94;&#x7684;protocol&#x540D;&#x5B57;&#x5E26;&#x4E0A;&#xFF0C;delegate&#x65B9;&#x6CD5;&#x4E0D;&#x8981;&#x5230;&#x5904;&#x4E71;&#x5199;&#xFF0C;&#x5199;&#x5230;&#x4E00;&#x5757;&#x533A;&#x57DF;&#x91CC;&#x9762;&#x53BB;&#xFF08;&#x4F7F;&#x7528;pragma mark&#xFF09;</li>
 <li>event response&#x4E13;&#x95E8;&#x5F00;&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x533A;&#x57DF;</li>
 <li>&#x5173;&#x4E8E;private methods&#xFF0C;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;ViewController&#x91CC;&#x9762;&#x4E0D;&#x5E94;&#x8BE5;&#x5199;</li>
-</ol>
-</li>
 </ol>
 
       
@@ -311,7 +305,7 @@
         <p><span>Title:</span><a href="/2017/10/31/PersonalCodingStandards/">个人编码风格规范</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">坏坏</a></p>
         <p><span>Created:</span>2017-10-31, 15:56:40</p>
-        <p><span>Updated:</span>2017-11-01, 11:14:27</p>
+        <p><span>Updated:</span>2017-11-01, 11:19:07</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2017/10/31/PersonalCodingStandards/" title="个人编码风格规范">http://yoursite.com/2017/10/31/PersonalCodingStandards/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2017/10/31/PersonalCodingStandards/　　By 坏坏" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -340,7 +334,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一个好的架构的要求"><span class="toc-number">1.</span> <span class="toc-text">一个好的架构的要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发规范"><span class="toc-number">2.</span> <span class="toc-text">开发规范</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一个好的架构的要求"><span class="toc-number">1.</span> <span class="toc-text">一个好的架构的要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#View代码结构的规定"><span class="toc-number">2.</span> <span class="toc-text">View代码结构的规定</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
